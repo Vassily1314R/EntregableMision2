@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./Presentacion.module.css";
 
 const imagenes = [
   {
@@ -85,26 +86,24 @@ export const Presentacion = () => {
   };
 
   return (
-    <div className="container">
-      <header className="header">Code By: William / Deyner</header>
+    <div className={styles.container}>
+      <header className={styles.header}>Code By: William / Deyner</header>
 
-      <h1 className="title">¡Bienvenidos!</h1>
-      <p className="subtitle">
-        Presentación del entregable de la Misión 2. A continuación, se muestra
-        el diseño de una base de datos en PostgreSQL, incluyendo la creación de
-        tablas, inserción de datos de prueba y las relaciones entre ellas.
+      <h1 className={styles.title}>¡Bienvenidos!</h1>
+      <p className={styles.subtitle}>
+        Presentación del entregable de la Misión 2...
       </p>
 
-      <nav className="nav">
+      <nav className={styles.nav}>
         {imagenes.map((img, index) => (
           <button
             key={index}
-            className={`navButton ${
-              img.url === imagenActiva.url ? "active" : ""
+            className={`${styles.navButton} ${
+              img.url === imagenActiva.url ? styles.active : ""
             }`}
             onClick={() => {
               setImagenActiva(img);
-              setIndiceCarrusel(0); // reinicia galería
+              setIndiceCarrusel(0);
             }}
           >
             {img.nombre}
@@ -113,14 +112,14 @@ export const Presentacion = () => {
       </nav>
 
       {modoInsert || modoRelaciones ? (
-        <div className="insertar-section">
+        <div className={styles["insertar-section"]}>
           <h2>{imagenActualCarrusel.titulo}</h2>
           <img
-            className="image"
+            className={styles.image}
             src={imagenActualCarrusel.url}
             alt={imagenActualCarrusel.titulo}
           />
-          <div className="nav-insertar">
+          <div className={styles["nav-insertar"]}>
             <button onClick={retroceder} disabled={indiceCarrusel === 0}>
               ← Anterior
             </button>
@@ -134,7 +133,7 @@ export const Presentacion = () => {
         </div>
       ) : (
         <img
-          className="image"
+          className={styles.image}
           src={imagenActiva.url}
           alt={`Presentación - ${imagenActiva.nombre}`}
         />

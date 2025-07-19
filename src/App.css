@@ -1,154 +1,26 @@
-/* === RESET & BODY === */
+/* App.css */
+
+/* Reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body,
-html {
+/* Body y html */
+html, body {
   height: 100%;
   width: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Centrar el contenido dentro del root */
 #root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   width: 100%;
-}
-
-/* === CONTENEDOR GENERAL === */
-.container {
-  max-width: 1000px;
-  width: 95%;
-  padding: 2rem 1rem;
-  margin: auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* === CABECERA === */
-.header {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-bottom: 1rem;
-}
-
-/* === TÍTULOS === */
-.title {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  max-width: 700px;
-}
-
-/* === NAVEGACIÓN PRINCIPAL === */
-.nav {
-  margin-bottom: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.navButton {
-  padding: 0.6rem 1.2rem;
-  font-size: 0.95rem;
-  border: none;
-  border-radius: 6px;
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.navButton:hover {
-  background-color: #444;
-}
-
-.active {
-  background-color: #2196f3;
-}
-
-/* === IMÁGENES === */
-.image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
-  margin: 1rem 0;
-}
-
-/* === SECCIÓN INSERTAR DATOS === */
-.insertar-section {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.insertar-section h2 {
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
-  color: #90caf9;
-}
-
-/* === BOTONES DE CARRUSEL === */
-.nav-insertar {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.nav-insertar button {
-  padding: 0.5rem 1.2rem;
-  background-color: #1e88e5;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.nav-insertar button:hover {
-  background-color: #1565c0;
-}
-
-.nav-insertar button:disabled {
-  background-color: #555;
-  cursor: not-allowed;
-}
-
-/* === RESPONSIVE ADICIONAL === */
-@media (max-width: 768px) {
-  .title {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  .navButton,
-  .nav-insertar button {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .insertar-section h2 {
-    font-size: 1.3rem;
-  }
 }
