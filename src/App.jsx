@@ -1,9 +1,10 @@
 import "./App.css";
+import { Presentacion } from "./components/Presentacion";
 
 function App() {
   return (
     <>
-      <h1>Presentacion entregable mision 2</h1>
+      <Presentacion />
     </>
   );
 }
