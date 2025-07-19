@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   min-height: 100vh;
   background-color: #121212;
@@ -23,37 +23,40 @@
 }
 
 .title {
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
   word-break: break-word;
 }
 
 .subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: 1.1rem;
   max-width: 700px;
   margin-bottom: 2rem;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #ccc;
+  padding: 0 0.5rem;
 }
 
 .nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   margin-bottom: 1.5rem;
 }
 
 .navButton {
-  padding: 0.5rem 1.1rem;
-  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
   border: none;
   border-radius: 6px;
   background-color: #333;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  min-width: 100px;
+  user-select: none;
 }
 
 .navButton:hover {
@@ -66,11 +69,13 @@
 }
 
 .image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  max-height: 60vh;
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
   margin-top: 1rem;
+  object-fit: contain;
 }
 
 .insertar-section {
@@ -79,13 +84,16 @@
   align-items: center;
   margin-top: 2rem;
   width: 100%;
+  max-width: 700px;
+  padding: 0 1rem;
 }
 
 .insertar-section h2 {
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-size: 1.6rem;
   margin-bottom: 1rem;
   color: #90caf9;
   user-select: none;
+  text-align: center;
 }
 
 .nav-insertar {
@@ -97,7 +105,7 @@
 }
 
 .nav-insertar button {
-  padding: 0.45rem 1.2rem;
+  padding: 0.6rem 1.5rem;
   font-size: 1rem;
   border-radius: 6px;
   border: none;
@@ -105,6 +113,8 @@
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s;
+  min-width: 110px;
+  user-select: none;
 }
 
 .nav-insertar button:hover:not(:disabled) {
@@ -117,22 +127,46 @@
 }
 
 /* Responsive */
+
 @media (max-width: 768px) {
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .subtitle {
     font-size: 1rem;
+    max-width: 100%;
   }
 
   .navButton,
   .nav-insertar button {
-    font-size: 0.85rem;
-    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    min-width: 90px;
+  }
+
+  .insertar-section {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .image {
+    max-height: 280px;
   }
 
   .insertar-section h2 {
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .navButton,
+  .nav-insertar button {
+    min-width: 80px;
+    font-size: 0.85rem;
   }
 }
